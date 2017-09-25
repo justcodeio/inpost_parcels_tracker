@@ -1,0 +1,14 @@
+{
+  "tracking_number":"111111111111111111111111",
+  "type":"inpost_locker_standard",
+  "custom_attributes":
+  {"target_machine_id":"XXXXXX"},
+  "status":"ready_to_pickup","tracking_details":
+[
+  {"status":"ready_to_pickup","origin_status":"XXX","datetime":"datetime"},
+  {"status":"out_for_delivery","origin_status":"XXX","datetime":"datetime"},
+  {"status":"adopted_at_source_branch","origin_status":"XXX","datetime":"datetime"},
+  {"status":"confirmed","origin_status":"XXX","datetime":"datetime"}
+],"expected_flow":[]
+,"created_at":"datetime", "updated_at":"datetime"
+}
