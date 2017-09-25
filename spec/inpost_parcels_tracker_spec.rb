@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe InpostParcelsTracker do
   it "has a version number" do
-    expect(InpostParcelsTracker::VERSION).not_to be '1.0.0'
+    expect(InpostParcelsTracker::VERSION).not_to be '1.0.1'
   end
 end
 
@@ -20,12 +20,14 @@ describe 'Inpost::Parcel' do
   let(:success) { Inpost::Parcel.new('111111111111111111111111') }
   let(:failure) { Inpost::Parcel.new('222222222222222222222222') }
   let(:error) { Inpost::Parcel.new('123') }
+  let(:empty) { Inpost::Parcel.new(nil) }
 
   context 'initialize' do
     it 'tracking code' do
       expect(success.instance_variables.blank?).to eq false
       expect(success.instance_values.values).to eq(%w(111111111111111111111111))
       expect { error }.to raise_error(RuntimeError)
+      expect { empty }.to raise_error(RuntimeError)
     end
   end
 

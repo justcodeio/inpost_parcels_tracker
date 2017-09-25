@@ -39,6 +39,12 @@ Inpost::Parcel.new('1111111111111111111').track
 RuntimeError: Invalid tracking code provided
 ```
 
+```ruby
+Inpost::Parcel.new(nil).track
+
+RuntimeError: Tracking code cannot be nil
+```
+
 Parcels tracking information storage gets eventually deleted from Inpost servers.
 This is what eventually will be returned:
 ```ruby

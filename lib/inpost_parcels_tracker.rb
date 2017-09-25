@@ -7,6 +7,7 @@ module Inpost
     HOST = 'https://api-shipx-pl.easypack24.net/v1/tracking/'.freeze
 
     def initialize(tracking_code)
+      raise 'Tracking code cannot be nil' if tracking_code.blank?
       raise 'Invalid tracking code provided' if tracking_code.size < 24
       @tracking_code = tracking_code
     end
