@@ -3,7 +3,7 @@ require 'pry'
 
 describe InpostParcelsTracker do
   it "has a version number" do
-    expect(InpostParcelsTracker::VERSION).not_to be '1.0.1'
+    expect(InpostParcelsTracker::VERSION).not_to be '1.0.2'
   end
 end
 
