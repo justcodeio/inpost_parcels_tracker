@@ -6,8 +6,8 @@ require 'inpost_parcels_tracker/version'
 Gem::Specification.new do |spec|
   spec.name          = "inpost_parcels_tracker"
   spec.version       = InpostParcelsTracker::VERSION
-  spec.authors       = ["Michal Andros"]
-  spec.email         = ["michalandros@gmail.com"]
+  spec.authors       = ["Filip Stybel", "Michal Andros"]
+  spec.email         = ["filip.stybel@justcode.io", "michalandros@gmail.com"]
 
   spec.summary       = %q{Track changes to Your parcels when using Inpost services}
   spec.description   = %q{Check your parcel status and history by providing a inpost parcel tracking number}

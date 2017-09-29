@@ -24,10 +24,14 @@ Inpost::Parcel.new('111111111111111111111111').track
 ```
 example success response :
 ```ruby
-=> {:tracking_number=>"111111111111111111111111", :type=>"inpost_locker_standard", :custom_attributes=>{:target_machine_id=>"XXXXXX"}, :status=>"ready_to_pickup", :tracking_details=>[{:status=>"ready_to_pickup", :origin_status=>"XXX", :datetime=>"datetime"},
- {:status=>"out_for_delivery", :origin_status=>"XXX", :datetime=>"datetime"},
+=>
+{:tracking_number=>"111111111111111111111111", :type=>"inpost_locker_standard", :custom_attributes=>{:target_machine_id=>"XXXXXX"}, :status=>"ready_to_pickup", :tracking_details=>
+[
+  {:status=>"ready_to_pickup", :origin_status=>"XXX", :datetime=>"datetime"},
+  {:status=>"out_for_delivery", :origin_status=>"XXX", :datetime=>"datetime"},
   {:status=>"adopted_at_source_branch", :origin_status=>"XXX", :datetime=>"datetime"},
-   {:status=>"confirmed", :origin_status=>"PPN", :datetime=>"datetime"}],
+  {:status=>"confirmed", :origin_status=>"PPN", :datetime=>"datetime"}
+],
     :expected_flow=>[], :created_at=>"datetime", :updated_at=>"datetime"}
 ```
 example fail responses :
@@ -51,7 +55,9 @@ This is what eventually will be returned:
 Inpost::Parcel.new('222222222222222222222222').track
 ```
 ```ruby
-=> {:status=>404, :error=>"resource_not_found", :message=>"Tracking information about 222222222222222222222222 shipment has not been found.", :details=>{}}
+=> {:status=>404, :error=>"resource_not_found",
+    :message=>"Tracking information about 222222222222222222222222 shipment has not been found.",
+    :details=>{}}
 ```
 ## Contributing
 
